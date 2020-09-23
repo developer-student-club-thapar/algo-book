@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - HeapSort",
+            "request": "launch",
+            "mainClass": "heap_sort.HeapSort",
+            "projectName": "algorithms_a8dd9d0c"
+        },
+        {
             "name": "g++-9 - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
