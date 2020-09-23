@@ -22,7 +22,7 @@
         - The largest element in a min-heap is stored at the root
         - The subtree rooted at a node contains values no larger than that contained at the node itself
 
-    <img src="mmh.png" width=500px alt="Max-Heap and Min-Heap"></img>
+    <img src="images/mmh.png" width=500px alt="Max-Heap and Min-Heap"></img>
 
 <p>&nbsp;</p>
 
@@ -49,7 +49,7 @@ As we know, the heap sort woks by visualizing the elements of the array as a spe
 1. __Make Binary tree from Array__:
     If the index of any element in the array is `i`, the element in the index `2i+1` will become the left child and element in `2i+2` index will become the right child. Also, the parent of any element at index `i` is given by the lower bound of `(i-1)/2`.
     
-<img src="mmh.png" width=500px alt="Binary Tree Representation"></img>
+<img src="images/mmh.png" width=500px alt="Binary Tree Representation"></img>
 
 
 2. __Heapify the tree__: 
@@ -64,18 +64,18 @@ As we know, the heap sort woks by visualizing the elements of the array as a spe
     ```
     Procedure for a three element tree would be:
 
-    <img src="heapify_0.png" width=700px alt="Heapification of 3 element tree"></img>
+    <img src="images/heapify_0.png" width=700px alt="Heapification of 3 element tree"></img>
 
     The example above shows two scenarios - one in which the root is the largest element and we don't need to do anything. And another in which the root had a larger element as a child and we needed to swap to maintain max-heap property.
     If you're worked with recursive algorithms before, you've probably identified that this must be the base case.
     Now let's think of another scenario in which there is more than one level.
 
-    <img src="heapify_1.png" width=300px alt="Subsets are Max-Heaps"></img>
+    <img src="images/heapify_1.png" width=300px alt="Subsets are Max-Heaps"></img>
 
     The top element isn't a max-heap but all the sub-trees are max-heaps.
     To maintain the max-heap property for the entire tree, we will have to keep pushing 2 downwards until it reaches its correct position.
 
-    <img src="heapify_2.png" width=600px alt="Subsets are Max-Heaps"></img>
+    <img src="images/heapify_2.png" width=600px alt="Heapification of root element"></img>
 
     Thus, to maintain the max-heap property in a tree where both sub-trees are max-heaps, we need to run heapify on the root element repeatedly until it is larger than its children or it becomes a leaf node.
 
@@ -99,11 +99,11 @@ As we know, the heap sort woks by visualizing the elements of the array as a spe
     for (int i = n / 2 - 1; i >= 0; i--)
         heapify(arr, n, i);
     ```
-    <img src="mh0.png" width=500px alt="Subsets are Max-Heaps"></img>
+    <img src="images/mh0.png" width=500px alt="Creating array to calculate i"></img>
 
-    <img src="mh1.png" width=700px alt="Subsets are Max-Heaps"></img>
+    <img src="images/mh1.png" width=700px alt="Step to build max-heap for heap sort"></img>
     
-    <img src="mh2.png" width=700px alt="Subsets are Max-Heaps"></img>
+    <img src="images/mh2.png" width=700px alt="Step to build max-heap for heap sort"></img>
 
 4. __Swap and Remove__:
     - Since the tree satisfies Max-Heap property, then the largest item is stored at the root node.
@@ -116,7 +116,7 @@ As we know, the heap sort woks by visualizing the elements of the array as a spe
 
     - The process is repeated until all the items of the list are sorted.
 
-    <img src="f.png" width=700px alt="Subsets are Max-Heaps"></img>
+    <img src="images/f.png" width=700px alt="Completing heap sort"></img>
 
     The code below shows the operation.
     ```
