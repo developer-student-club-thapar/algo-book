@@ -153,12 +153,12 @@ As we know, the heap sort woks by visualizing the elements of the array as a spe
 
         Heapsort(A as array) 
         {
-        n = length(A)
-        for i = n/2 downto 1   
-            Heapify(A, n ,i)
-        
-        for i = n downto 2
-            exchange A[1] with A[i]
-            A.heapsize = A.heapsize - 1
-            Heapify(A, i, 0)
+            n = length(A)
+            for i = n/2 downto 1   
+                Heapify(A, n ,i)
+            
+            for i = n downto 2
+                exchange A[1] with A[i]
+                A.heapsize = A.heapsize - 1
+                Heapify(A, i, 0)
         }
