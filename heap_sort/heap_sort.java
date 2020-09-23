@@ -1,51 +1,62 @@
-import java.util.Arrays;
-import java.util.Scanner;
+// Java program for implementation of Heap Sort 
+public class HeapSort 
+{ 
+	public void sort(int arr[]) 
+	{ 
+		int n = arr.length; 
 
-public class HeapSort {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of elements : ");
-        int n = sc.nextInt();
-        int arr[] = new int[n];
-        System.out.println("Enter " + n + " elements :");
-        for (int i = 0; i < n; i++)
-            arr[i] = sc.nextInt();
+		for (int i = n / 2 - 1; i >= 0; i--) 
+			heapify(arr, n, i); 
 
-        heapSort(arr);
-        System.out.println("\nThe sorted array : ");
-        System.out.println(Arrays.toString(arr));
+		for (int i=n-1; i>0; i--) 
+		{ 
+			int temp = arr[0]; 
+			arr[0] = arr[i]; 
+			arr[i] = temp; 
 
-    }
+			heapify(arr, i, 0); 
+		} 
+	} 
+ 
+	void heapify(int arr[], int n, int i) 
+	{ 
+		int largest = i;
+		int l = 2*i + 1;
+		int r = 2*i + 2;
 
-    static void heapSort(int arr[]) {
-        makeMaxHeap(arr);
-        int tmp;
-        for (int i = arr.length - 1; i > 0; i--) {
-            tmp = arr[0];
-            arr[0] = arr[i];
-            arr[i] = tmp;
-            heapAdjust(arr, 0, i);
-        }
-    }
+		if (l < n && arr[l] > arr[largest]) 
+			largest = l; 
 
-    private static void makeMaxHeap(int arr[]) {
-        int len = arr.length;
-        for (int i = len / 2 - 1; i >= 0; --i) {
-            heapAdjust(arr, i, len);
-        }
-    }
+		if (r < n && arr[r] > arr[largest]) 
+			largest = r; 
 
-    private static void heapAdjust(int arr[], int i, int n) {
-        int j = 2 * i + 1;
-        int tmp = arr[i];
-        while (j < n) {
-            if (j < n - 1 && arr[j] < arr[j + 1])
-                j++;
-            if (tmp > arr[j])
-                break;
-            arr[(j - 1) / 2] = arr[j];
-            j = 2 * j + 1;
-        }
-        arr[(j - 1) / 2] = tmp;
-    }
-}
+		if (largest != i) 
+		{ 
+			int swap = arr[i]; 
+			arr[i] = arr[largest]; 
+			arr[largest] = swap; 
+
+      heapify(arr, n, largest); 
+		} 
+	} 
+
+	static void printArray(int arr[]) 
+	{ 
+		int n = arr.length; 
+		for (int i=0; i<n; ++i) 
+			System.out.print(arr[i]+" "); 
+		System.out.println(); 
+	} 
+
+	public static void main(String args[]) 
+	{ 
+		int arr[] = {12, 11, 13, 5, 6, 7}; 
+		int n = arr.length; 
+
+		HeapSort ob = new HeapSort(); 
+		ob.sort(arr); 
+
+		System.out.println("Sorted array is"); 
+		printArray(arr); 
+	} 
+} 
