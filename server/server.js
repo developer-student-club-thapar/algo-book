@@ -8,9 +8,20 @@ import App from "../src/App";
 import dotenv from "dotenv";
 
 import routes from "./routes/routes";
+import db from "./config/db";
+
+process.on("uncaughtException", (err) => {
+    console.log(err);
+    process.exit(1);
+});
+process.on("unhandledRejection", (err) => {
+    console.log(err);
+    process.exit(2);
+});
 
 const app = express();
 dotenv.config();
+db();
 app.use("/api", routes);
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
