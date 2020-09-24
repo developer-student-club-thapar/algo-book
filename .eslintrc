@@ -1,0 +1,19 @@
+{
+    "extends": ["eslint:recommended", "prettier", "plugin:react/recommended"],
+    "parser": "babel-eslint",
+    "rules": {
+        //   "no-console": 1,
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    },
+    "plugins": ["import", "prettier", "jsx-a11y", "react"],
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "env": { "es6": true, "browser": true, "node": true, "jest": true }
+}
