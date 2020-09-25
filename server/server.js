@@ -8,7 +8,7 @@ import App from "../src/App";
 import dotenv from "dotenv";
 
 import routes from "./routes/routes";
-import db from "./config/db";
+import db from "./Config/db";
 
 process.on("uncaughtException", (err) => {
     console.log(err);
