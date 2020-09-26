@@ -15,7 +15,7 @@ function App() {
     });
     return (
         <div>
-            TEST
+            {/* TEST */}
             <Router>
                 <Landing path="/" />
                 <Algo path="/algo" />
