@@ -49,9 +49,9 @@ Input will be:
 
     Set x = i
     Compare A[x] with item. If A[x]== item, then print x as the valid location else set x++
-    Repeat Step 4.1 and 4.2 till x < m
+    Repeat Step 1 and 2 till x < m
 
-    ```
+    
 
 <p>&nbsp;</p>
 
