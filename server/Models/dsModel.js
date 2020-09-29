@@ -35,7 +35,7 @@ const dataSchema = new mongoose.Schema({
     slug: String,
 });
 
-dataSchema.pre("save", function (next) {
+dataSchema.pre("save", function(next) {
     this.slug = slugify(this.name, { lower: true });
     next();
 });

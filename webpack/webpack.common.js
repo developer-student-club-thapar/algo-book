@@ -22,7 +22,7 @@ module.exports = {
         plugins.CleanWebpackPlugin,
         new webpack.ProgressPlugin(),
         new webpack.BannerPlugin({
-            banner: (yourVariable) => {
+            banner: yourVariable => {
                 return `yourVariable: ${yourVariable}`;
             },
         }),
