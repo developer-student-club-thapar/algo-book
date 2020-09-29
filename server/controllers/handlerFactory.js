@@ -9,7 +9,7 @@ class AppError extends Error {
     }
 }
 
-exports.getAll = (Model) => async (req, res) => {
+exports.getAll = Model => async (req, res) => {
     try {
         const doc = await Model.find(req.query);
         if (!doc) {
@@ -34,7 +34,7 @@ exports.getAll = (Model) => async (req, res) => {
     }
 };
 
-exports.getOne = (Model) => async (req, res) => {
+exports.getOne = Model => async (req, res) => {
     try {
         let query = Model.findById(req.params.id);
         const doc = await query;

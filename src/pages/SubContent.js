@@ -1,7 +1,7 @@
 /*
 Page where all folders of "Content" would be displayed
-Eg:- If we choose to visit Algothrims/Sorting then this page 
-would show all sorting algos like bubble, merge, quick etc 
+Eg:- If we choose to visit Algothrims/Sorting then this page
+would show all sorting algos like bubble, merge, quick etc
 
 Home/Algorithms/Sorting or Home/DataStructures/LinkedList
 */
