@@ -11,33 +11,38 @@ env:
     SERVICE_NAME: algo-book
 
 jobs:
-    setup-build-deploy:
-        name: Setup , Build and Deploy
+    build:
+        name: Cloud Run Deployment
         runs-on: ubuntu-latest
-
         steps:
             - name: Checkout
-              uses: actions/checkout@v1
+              uses: actions/checkout@master
 
-              #Setup Google CLI
-            - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+            - name: Setup GCP Service Account
+              uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
               with:
-                  version: "275.0.0"
+                  version: "latest"
                   service_account_email: ${{ secrets.SA_EMAIL }}
                   service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+                  export_default_credentials: true
 
-              # Configure GCloud CLI
-            - name: gcloud Set up
+            - name: Configure Docker
               run: |
-                  gcloud config set project $PROJECT_ID
-              # Build and push the image to google container registry
+                  gcloud auth configure-docker
+
             - name: Build
               run: |
-                  gcloud builds submit
-              # Deploy image to cloud run
+                  docker build -f ./docker/production/Dockerfile -t gcr.io/$PROJECT_ID/$SERVICE_NAME:latest .
+
+            - name: Push
+              run: |
+                  docker push gcr.io/$PROJECT_ID/$SERVICE_NAME:latest
+
             - name: Deploy
               run: |
                   gcloud run deploy $SERVICE_NAME \
-                    --region $RUN_REGION \
-                    --image gcr.io/$PROJECT_ID/$SERVICE_NAME:latest \
-                    --platform managed
+                  --region $RUN_REGION \
+                  --image gcr.io/$PROJECT_ID/$SERVICE_NAME \
+                  --platform managed \
+                  --allow-unauthenticated \
+                  --project $PROJECT_ID
