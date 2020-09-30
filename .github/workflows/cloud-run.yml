@@ -45,4 +45,5 @@ jobs:
                   --image gcr.io/$PROJECT_ID/$SERVICE_NAME \
                   --platform managed \
                   --allow-unauthenticated \
-                  --project $PROJECT_ID
+                  --project $PROJECT_ID \
+                  --port=3000
