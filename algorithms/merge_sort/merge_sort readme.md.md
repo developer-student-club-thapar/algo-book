@@ -34,7 +34,9 @@ After while loop executes, there can be sitution when one array has merged compl
        merged[k++] = A2[j++];
  ```
 Hence, two sorted arrays get merged into the third array and finally we gets the sorted array as output.
+&nbsp;
 <img src="1/array 3.png"> 
+&nbsp;
 ## Explanation
 Merge sort algorithm says that it will divide the array into two parts by finding the mid of given arrray. Then it will call the merge_sort function on two parts and return two sorted arrays. At last we will merge the two sorted arrays into the 3rd array and copy the 3rd array into orginal array. In this way, our array will get sorted.
 
