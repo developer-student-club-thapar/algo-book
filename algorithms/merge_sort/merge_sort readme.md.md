@@ -59,15 +59,19 @@ Now let's have a look at the working of the algorithm:-
 #### 2. Divide the whole array into two parts. Here we will call merge_sort will divide the array into two equal parts by calculatng `mid=(starting_index+ending_index)/2`. 
 &nbsp;
 <img src="1/solve 2.jpg"> 
-&nbsp;
+
+
 It will divide the array into two parts until the atomic values are obtained.
-&nbsp;
+
 <img src="1/solve 3.jpg"> 
-&nbsp;
+
 And finally we achieve the atomic values which can no more be divided.
-&nbsp;
+
+
 <img src="1/solve 4.jpg"> 
+
 After achieving the atomic values, it hits the base case condition and finally merging starts.
+
 #### 3. Merging of elements
 The first element of both the lists are compared. If sorting has to be done in ascending order, the smaller element among two becomes a new element of the sorted list. This procedure is repeated until both the smaller sublists are emptied and the newly combined sublist covers all the elements of both the sublists.
 
