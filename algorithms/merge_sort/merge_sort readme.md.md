@@ -115,7 +115,7 @@ Step 3 − merge the smaller lists into new lists in sorted order.
     mergeSort(A, q+1, r)
     merge(A, p, q, r)
   ```
- ## External Contents
+ ## External Contentarray is
  - Visualise using this [merge sort visualizers](https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/visualize/)
  - view the [video](https://www.youtube.com/watch?v=TzeBrDU-JaY)
 
