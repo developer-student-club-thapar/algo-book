@@ -54,9 +54,13 @@ Now let's have a look at the working of the algorithm:-
 &nbsp;
 <img src="/1/solve 2.jpg"> 
 &nbsp;
+
 It will divide the array into two parts until the atomic values are obtained.
+
 &nbsp;
+
 <img src="1/solve 3.jpg"> 
+
 &nbsp;
 And finally we achieve the atomic values which can no more be divided.
 &nbsp;
