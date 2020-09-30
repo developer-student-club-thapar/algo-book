@@ -2,6 +2,6 @@ steps:
     - name: "gcr.io/cloud-builders/docker"
       args:
           - "build"
-          - "--tag=gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA"
+          - "--tag=gcr.io/$PROJECT_ID/algo-book:latest"
           - "--file=./docker/production/Dockerfile"
           - "."
