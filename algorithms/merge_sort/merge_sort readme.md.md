@@ -74,6 +74,7 @@ After merging, our array becomes sorted and looks like this.
 <p align="center">
 <img src="1/an.gif" width="300" height="300" />
 </p>
+
 ## Pseudo code
 
 ### Algorithm
