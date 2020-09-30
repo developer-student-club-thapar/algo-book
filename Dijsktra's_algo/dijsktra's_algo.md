@@ -57,35 +57,35 @@ Let us trace the above algorithm using an example:
 
 Consider the following inputs:
 
-<img src="dj1.jpg" width=300px alt="represent"></img>
+<img src="images/dj1.jpg" width=300px alt="represent"></img>
 
 Step 1: The set sptSet is initially empty and distances assigned to vertices are {0, INF, INF, INF, INF, INF, INF, INF} where INF indicates infinite. Now pick the vertex with minimum distance value. The vertex 0 is picked, include it in sptSet. So sptSet becomes {0}. After including 0 to sptSet, update distance values of its adjacent vertices. Adjacent vertices of 0 are 1 and 7. The distance values of 1 and 7 are updated as 4 and 8. Following subgraph shows vertices and their distance values, only the vertices with finite distance values are shown. The vertices included in SPT are shown in green colour.
 
-<img src="dj2.jpg" width=200px alt="represent"></img>
+<img src="images/dj2.jpg" width=200px alt="represent"></img>
 
 
 
 
 Step 2: Pick the vertex with minimum distance value and not already included in SPT (not in sptSET). The vertex 1 is picked and added to sptSet. So sptSet now becomes {0, 1}. Update the distance values of adjacent vertices of 1. The distance value of vertex 2 becomes 12.
    
- <img src="dj3.jpg" width=200px alt="represent"></img>
+ <img src="images/dj3.jpg" width=200px alt="represent"></img>
 
 
 
 Step 3: Pick the vertex with minimum distance value and not already included in SPT (not in sptSET). Vertex 7 is picked. So sptSet now becomes {0, 1, 7}. Update the distance values of adjacent vertices of 7. The distance value of vertex 6 and 8 becomes finite (15 and 9 respectively).
   
-  <img src="dj4.jpg" width=200px alt="represent"></img>
+  <img src="images/dj4.jpg" width=200px alt="represent"></img>
 
 
 Step 4: Pick the vertex with minimum distance value and not already included in SPT (not in sptSET). Vertex 6 is picked. So sptSet now becomes {0, 1, 7, 6}. Update the distance values of adjacent vertices of 6. The distance value of vertex 5 and 8 are updated.
 
-<img src="dj5.jpg" width=300px alt="represent"></img>
+<img src="images/dj5.jpg" width=300px alt="represent"></img>
 
 
 
 Step 5: We repeat the above steps until sptSet does include all vertices of given graph. Finally, we get the following Shortest Path Tree (SPT).
  
- <img src="dj6.jpg" width=300px alt="represent"></img>
+ <img src="images/dj6.jpg" width=300px alt="represent"></img>
 
 
 
