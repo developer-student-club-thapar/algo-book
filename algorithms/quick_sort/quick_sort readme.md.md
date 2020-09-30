@@ -54,15 +54,17 @@ By above algo, our elements get placed on their certain positions as explained a
 Now we will call quick_sort() function on both sides and again array gets passed into partion function using recursion and at last our array will get sorted. 
 
 Here's one more example at glance.
-&nbsp;
-&nbsp;  &nbsp;  
+
+
 <p align="center">
   <img width="750" height="850" src="quick/2.jpg">
 </p>
-&nbsp;    
+
+
 <p align="center"> 
 <img src="quick/ani.gif" width="500" height="600" />
 </p>
+
 ## Pseudo code
 ```
   partition(int input[],int si,int ei)
@@ -108,8 +110,10 @@ quick_sort(int input[],int si,int ei)
 	quick_sort(input,si,c-1);
     quick_sort(input,c+1,ei);
 ```
+
 ## External contentarray is
 
 - [view the refence video ](https://www.youtube.com/watch?v=COk73cpQbFQ&t=342s)
 - [view the visulazer ](https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/visualize/)
+
 ---
