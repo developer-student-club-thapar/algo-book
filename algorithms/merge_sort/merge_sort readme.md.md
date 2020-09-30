@@ -21,20 +21,20 @@
        else
           merged[k++] = A2[j++] 
         ```
-      We will compare A1[i] and A2[j] and insert smaller value into merged array and increment the corresponding index of that corresponding array whose value we incremented.
-      <img src="1/2.png">  
-      After while loop executes, there can be sitution when one array has merged completely in the third array but other has some elements left. Hence, this can be soved by           using another while loop that will traverse the elements which are left in the other array. 
-      &nbsp;
-      <img src="1/array 2.png">  
-      &nbsp;
-      ``` 
-      while i < n1 
-        merged[k++] = A1[i++]; 
-      while (j < n2) 
-        merged[k++] = A2[j++];
-        ```
-        Hence, two sorted arrays get merged into the third array and finally we gets the sorted array as output.
-       <img src="1/array 3.png"> 
+We will compare A1[i] and A2[j] and insert smaller value into merged array and increment the corresponding index of that corresponding array whose value we incremented.
+<img src="1/2.png">  
+After while loop executes, there can be sitution when one array has merged completely in the third array but other has some elements left. Hence, this can be soved by           using another while loop that will traverse the elements which are left in the other array. 
+&nbsp;
+<img src="1/array 2.png">  
+ &nbsp;
+ ``` 
+    while i < n1 
+      merged[k++] = A1[i++]; 
+     while (j < n2) 
+       merged[k++] = A2[j++];
+ ```
+Hence, two sorted arrays get merged into the third array and finally we gets the sorted array as output.
+<img src="1/array 3.png"> 
 ## Explanation
 Merge sort algorithm says that it will divide the array into two parts by finding the mid of given arrray. Then it will call the merge_sort function on two parts and return two sorted arrays. At last we will merge the two sorted arrays into the 3rd array and copy the 3rd array into orginal array. In this way, our array will get sorted.
 
