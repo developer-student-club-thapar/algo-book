@@ -18,12 +18,11 @@ The main aim is to do the partitioning of the array and returning the index wher
    
    - This is our 1st step. Now arrange the elements in such a way that the elements with value less than pivot are on left side and the elements with values greater than pivot are on right.
    
-&nbsp;
-&nbsp;
+
 <p align="center">
   <img width="550" height="800" src="quick/1.png">
 </p>
-&nbsp;
+
 
 ```
         i=si
@@ -41,6 +40,7 @@ The main aim is to do the partitioning of the array and returning the index wher
             j--
    
 ```
+
 By above algo, our elements get placed on their certain positions as explained above and we will return the index where pivot is placed.  
        
   #### 3. Call the quick_sort() function 
@@ -51,6 +51,7 @@ By above algo, our elements get placed on their certain positions as explained a
     quick_sort(arr,si,c-1)
     quick_sort(arr,c+1,ei)
 ```   
+
 Now we will call quick_sort() function on both sides and again array gets passed into partion function using recursion and at last our array will get sorted. 
 
 Here's one more example at glance.
@@ -66,6 +67,7 @@ Here's one more example at glance.
 </p>
 
 ## Pseudo code
+
 ```
   partition(int input[],int si,int ei)
 
