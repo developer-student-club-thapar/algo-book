@@ -111,7 +111,7 @@ quick_sort(int input[],int si,int ei)
     quick_sort(input,c+1,ei);
 ```
 
-## External contentarray is
+## External contentarray 
 
 - [view the refence video ](https://www.youtube.com/watch?v=COk73cpQbFQ&t=342s)
 - [view the visulazer ](https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/visualize/)
