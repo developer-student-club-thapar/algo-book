@@ -22,9 +22,8 @@
           merged[k++] = A2[j++] 
         ```
       We will compare A1[i] and A2[j] and insert smaller value into merged array and increment the corresponding index of that corresponding array whose value we incremented.
-      <img src="1/2.png">  '
-      &nbsp;
-After while loop executes, there can be sitution when one array has merged completely in the third array but other has some elements left. Hence, this can be soved by  using another while loop that will traverse the elements which are left in the other array. 
+      <img src="1/2.png">  
+      After while loop executes, there can be sitution when one array has merged completely in the third array but other has some elements left. Hence, this can be soved by using another while loop that will traverse the elements which are left in the other array. 
       &nbsp;
       <img src="1/array 2.png">  
       &nbsp;
@@ -45,22 +44,15 @@ Now let's have a look at the working of the algorithm:-
 <img src="1/4.png">  
 &nbsp;
 #### 1. Let's take an unsorted array
-&nbsp;
 <img src="1/solve 1.jpg">  
-
 &nbsp;
 #### 2. Divide the whole array into two parts. Here we will call merge_sort will divide the array into two equal parts by calculatng `mid=(starting_index+ending_index)/2` 
-
 &nbsp;
 <img src="/1/solve 2.jpg"> 
 &nbsp;
-
 It will divide the array into two parts until the atomic values are obtained.
-
 &nbsp;
-
 <img src="1/solve 3.jpg"> 
-
 &nbsp;
 And finally we achieve the atomic values which can no more be divided.
 &nbsp;
@@ -69,7 +61,7 @@ After achieving the atomic values, it hits the base case condition and finally m
 #### 3. Merging of elements
 The first element of both the lists are compared. If sorting has to be done in ascending order, the smaller element among two becomes a new element of the sorted list. This procedure is repeated until both the smaller sublists are emptied and the newly combined sublist covers all the elements of both the sublists.
 &nbsp;
-<img src="1/solve 5.jpg"> 
+<img src="/1/solve 5.jpg"> 
 &nbsp;
 In the next iteration of the combining phase, we compare the lists of two data values, and merge them into a list in sorted order using algorithm (given above in prerequisites) merge two soted arrays into the third array and copy the data of third array into the original array.
 &nbsp;
@@ -82,7 +74,6 @@ After merging, our array becomes sorted and looks like this.
 <p align="center">
 <img src="1/an.gif" width="300" height="300" />
 </p>
-
 ## Pseudo code
 
 ### Algorithm
