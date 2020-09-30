@@ -1,0 +1,43 @@
+name: Build and Deploy to cloud Run
+
+on:
+    push:
+        branches:
+            - master
+
+env:
+    PROJECT_ID: ${{ secrets.PROJECT_ID }}
+    RUN_REGION: us-central1
+    SERVICE_NAME: algo-book
+
+jobs:
+    setup-build-deploy:
+        name: Setup , Build and Deploy
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v1
+
+              #Setup Google CLI
+            - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+              with:
+                  version: "275.0.0"
+                  service_account_email: ${{ secrets.SA_EMAIL }}
+                  service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+
+              # Configure GCloud CLI
+            - name: gcloud Set up
+              run: |
+                  gcloud config set project $PROJECT_ID
+              # Build and push the image to google container registry
+            - name: Build
+              run: |
+                  gcloud builds submit
+              # Deploy image to cloud run
+            - name: Deploy
+              run: |
+                  gcloud run deploy $SERVICE_NAME \
+                    --region $RUN_REGION \
+                    --image gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA \
+                    --platform managed
