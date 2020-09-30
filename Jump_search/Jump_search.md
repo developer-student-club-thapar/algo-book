@@ -7,7 +7,7 @@
 Jump search algorithm, also called as block search algorithm. Only sorted list of array or table can alone use the Jump search algorithm. In jump search algorithm, it is not at all necessary to scan every element in the list as we do in linear search algorithm. We just check the R element and if it is less than the key element, then we move to the R + R element, where all the elements between R element and R + R element are skipped. This process is continued until R element becomes equal to or greater than key element called boundary value. The value of R is given by R = sqrt(n), where n is the total number of elements in an array. Once the R element attain the boundary value, a linear search is done to find the key value and its position in the array. It must be noted that in Jump search algorithm, a linear search is done in reverse manner that is from boundary value to previous value of R.
 <p>&nbsp;</p>
 
-<img src="JS1.png" width=500px alt="represent"></img>
+<img src="images/JS1.png" width=500px alt="represent"></img>
 
 <p>&nbsp;</p>
 
@@ -73,27 +73,27 @@ Step 1: m = √n = 4 (Block Size)
 
 
 Step 2: Compare A[0] with item. Since A[0] != item and A[0]<item, skip to the next block
-          <img src="JS2.png" width=500px alt="represent"></img>
+          <img src="images/JS2.png" width=500px alt="represent"></img>
 
 
 
 Step 3: Compare A[3] with item. Since A[3] != itemand A[3]<item, skip to the next block
-          <img src="JS3.png" width=500px alt="represent"></img>
+          <img src="images/JS3.png" width=500px alt="represent"></img>
 
 
 Step 4: Compare A[6] with item. Since A[6] != itemand A[6]<item, skip to the next block
-          <img src="JS4.png" width=500px alt="represent"></img>
+          <img src="images/JS4.png" width=500px alt="represent"></img>
 
 
 
 Step 5: Compare A[9] with item. Since A[9] != itemand A[9]<item, skip to the next block
-           <img src="JS5.png" width=500px alt="represent"></img>
+           <img src="images/JS5.png" width=500px alt="represent"></img>
 
 
 Step 6: Compare A[12] with item. Since A[12] != item and A[12] >item, skip to A[9] (beginning of the current block) and perform a linear search.
           
  <img src="JS6.png" width=500px alt="represent"></img>
-          <img src="JS7.png" width=500px alt="represent"></img>
+          <img src="images/JS7.png" width=500px alt="represent"></img>
 
 
 
@@ -101,7 +101,7 @@ Step 6: Compare A[12] with item. Since A[12] != item and A[12] >item, skip to A[
     Compare A[9] with item. Since A[9] != item, scan the next element
     Compare A[10] with item. Since A[10] == item, index 10 is printed as the valid location and the algorithm will terminate
 
-<img src="JS8.png" width=500px alt="represent"></img>        
+<img src="images/JS8.png" width=500px alt="represent"></img>        
          
 
 ## Psuedo Code
