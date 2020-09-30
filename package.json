@@ -13,7 +13,7 @@
         "dev": "npm run webpack-dev-server -- --open --hot --env.mode development ",
         "dev:server": "nodemon --exec npm run server",
         "server": "babel-node -r dotenv/config server/index dotenv_config_path=./.env.dev",
-        "prod": "npm run webpack -p -- --env.mode production",
+        "prod": "CI=false npm run webpack -p -- --env.mode production",
         "webpack": "webpack",
         "webpack-dev-server": "webpack-dev-server",
         "lint": "eslint .",
