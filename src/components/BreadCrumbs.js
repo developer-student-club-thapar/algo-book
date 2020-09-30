@@ -2,7 +2,7 @@
 Desc:- BreadCrumbs to show the current directory
 Eg :- Home/Algorithms/Sorting/Bubble/C++
 */
-
+/* eslint-disable */
 import React, { Fragment } from "react";
 import { Breadcrumbs, Typography, Link } from "@material-ui/core";
 import { NavigateNext } from "@material-ui/icons";

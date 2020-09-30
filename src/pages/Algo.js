@@ -3,7 +3,7 @@ Tab where 2 "folders" of Algo and DS would be displayed
 
 Home
 */
-
+/* eslint-disable */
 import React, { Fragment, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import {

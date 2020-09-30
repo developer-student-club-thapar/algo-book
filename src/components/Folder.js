@@ -1,7 +1,7 @@
 /*
 Component to be displayed as folder
 */
-
+/* eslint-disable */
 import React, { Fragment } from "react";
 import FolderIcon from "@material-ui/icons/Folder";
 import {

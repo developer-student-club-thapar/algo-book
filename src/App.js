@@ -1,14 +1,9 @@
-import React, { useEffect } from "react";
+/* eslint-disable */
+import React from "react";
 // import { Router } from "@reach/router";
-import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
-    Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { CssBaseline } from "@material-ui/core";
 import "./css/App.css";
-import api from "./util/api";
 import Algo from "./pages/Algo";
 
 function App() {
@@ -19,21 +14,7 @@ function App() {
     //     };
     //     demoGetReq();
     // });
-    return (
-        <>
-            <Router>
-                <CssBaseline>
-                    <Switch>
-                        <Route
-                            exact
-                            path="/:page"
-                            render={(props) => <Algo {...props} />}
-                        />
-                    </Switch>
-                </CssBaseline>
-            </Router>
-        </>
-    );
+    return <div>Hello World</div>;
 }
 
 export default App;
