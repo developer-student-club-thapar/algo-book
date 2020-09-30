@@ -95,9 +95,8 @@ The algorithm can be implemented in two methods:-
         complete = complete + 1
     end
   end
-  ```
 
-findAvgTime(proc):
+  findAvgTime(proc):
     findCompletionTime(proc)
     while(i < Number of process):
         turnAround = completeTime - arrival
@@ -106,9 +105,9 @@ findAvgTime(proc):
     end
     Calculate average of total turnAround and waitTime
     display average
-end
+  end
+  ```
 
-```
 ## External content
 
 A [theoretical example](https://www.guru99.com/shortest-job-first-sjf-scheduling.html "SJF Solved Example") of the **SJF Algorithm** is provided at the link.
@@ -118,4 +117,3 @@ To start with the **Nim** language, [go here](https://nim-lang.org/docs/tut1.htm
 For people with no experience in programming, follow this [tutorial](https://narimiran.github.io/nim-basics/ "Nim Basics Tutorial") to **Nim**.
 
 ***
-```
