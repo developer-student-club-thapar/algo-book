@@ -23,7 +23,7 @@
         ```
       We will compare A1[i] and A2[j] and insert smaller value into merged array and increment the corresponding index of that corresponding array whose value we incremented.
       <img src="1/2.png">  
-      After while loop executes, there can be sitution when one array has merged completely in the third array but other has some elements left. Hence, this can be soved by using another while loop that will traverse the elements which are left in the other array. 
+      After while loop executes, there can be sitution when one array has merged completely in the third array but other has some elements left. Hence, this can be soved by           using another while loop that will traverse the elements which are left in the other array. 
       &nbsp;
       <img src="1/array 2.png">  
       &nbsp;
