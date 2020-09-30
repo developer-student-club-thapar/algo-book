@@ -109,8 +109,8 @@ Step 6: Compare A[12] with item. Since A[12] != item and A[12] >item, skip to A[
 <p>&nbsp;</p>
 
   
-int jumpSearch(int arr[], int x, int n) 
-{ 
+    int jumpSearch(int arr[], int x, int n) 
+    { 
 
     // Finding block size to be jumped 
     int step = sqrt(n); 
@@ -142,4 +142,4 @@ int jumpSearch(int arr[], int x, int n)
         return prev; 
   
     return -1; 
-} 
+    } 
