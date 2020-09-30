@@ -1,4 +1,4 @@
-/* 
+/*
 Main Landing page with small intro to project, DSC, OpenSource and Hactoberfest
 */
 
