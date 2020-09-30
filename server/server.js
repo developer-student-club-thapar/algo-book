@@ -10,10 +10,10 @@ import dotenv from "dotenv";
 import routes from "./routes/routes";
 import db from "./Config/db";
 
-process.on("uncaughtException", (err) => {
+process.on("uncaughtException", err => {
     console.log(err);
 });
-process.on("unhandledRejection", (err) => {
+process.on("unhandledRejection", err => {
     console.log(err);
 });
 

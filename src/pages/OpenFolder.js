@@ -1,5 +1,5 @@
 /*
-Page where all the files related to 
+Page where all the files related to
 previously selected algo/DS would be listed
 like bubbleSort in C++, python, JS, Java and pseudo
 

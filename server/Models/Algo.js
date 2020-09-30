@@ -32,7 +32,7 @@ const schema = new mongoose.Schema({
     slug: String,
 });
 
-schema.pre("save", function (next) {
+schema.pre("save", function(next) {
     this.slug = slugify(this.name, { lower: true });
     next();
 });
