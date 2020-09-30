@@ -48,7 +48,7 @@ Now let's have a look at the working of the algorithm:-
 &nbsp;
 #### 2. Divide the whole array into two parts. Here we will call merge_sort will divide the array into two equal parts by calculatng `mid=(starting_index+ending_index)/2` 
 &nbsp;
-<img src="/1/solve 2.jpg"> 
+<img src="1/solve 2.jpg"> 
 &nbsp;
 It will divide the array into two parts until the atomic values are obtained.
 &nbsp;
@@ -61,7 +61,7 @@ After achieving the atomic values, it hits the base case condition and finally m
 #### 3. Merging of elements
 The first element of both the lists are compared. If sorting has to be done in ascending order, the smaller element among two becomes a new element of the sorted list. This procedure is repeated until both the smaller sublists are emptied and the newly combined sublist covers all the elements of both the sublists.
 &nbsp;
-<img src="/1/solve 5.jpg"> 
+<img src="1/solve 5.jpg"> 
 &nbsp;
 In the next iteration of the combining phase, we compare the lists of two data values, and merge them into a list in sorted order using algorithm (given above in prerequisites) merge two soted arrays into the third array and copy the data of third array into the original array.
 &nbsp;
