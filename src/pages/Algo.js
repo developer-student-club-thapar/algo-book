@@ -12,6 +12,7 @@ import {
     Tab,
     Tabs,
     Paper,
+    Grid,
     makeStyles,
 } from "@material-ui/core";
 import BreadCrumbs from "../components/BreadCrumbs";
@@ -23,21 +24,21 @@ const Algo = () => {
 
     const AlgoComponent = () => {
         return (
-            <Fragment>
+            <Grid container>
                 {algo.map((x, index) => (
                     <Folder name={x} link={`/algo/${x}`} key={index} />
                 ))}
-            </Fragment>
+            </Grid>
         );
     };
 
     const DsComponent = () => {
         return (
-            <Fragment>
+            <Grid container>
                 {ds.map((x, index) => (
                     <Folder name={x} link={`/ds/${x}`} key={index} />
                 ))}
-            </Fragment>
+            </Grid>
         );
     };
 
@@ -84,7 +85,7 @@ const Algo = () => {
                     crumbs={[{ name: "Home", link: "/" }]}
                     active={valueToPage[tab]}
                 />
-                <Paper elevation={3} variant="outlined">
+                <Paper elevation={0} variant="outlined">
                     <AppBar position="static" color="inherit">
                         <Tabs
                             value={tab}
@@ -98,6 +99,7 @@ const Algo = () => {
                         </Tabs>
                     </AppBar>
                 </Paper>
+                <br />
                 {renderPage()}
             </Container>
         </Fragment>
