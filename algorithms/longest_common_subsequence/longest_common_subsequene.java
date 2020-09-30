@@ -47,8 +47,8 @@ class LCS_ALGO {
     }
   
     public static void main(String[] args) {
-      String S1 = "ACADB";
-      String S2 = "CBDA";
+      String S1 = "ABCDEFGH";
+      String S2 = "ABZCDXEFYGH";
       int m = S1.length();
       int n = S2.length();
       lcs(S1, S2, m, n);

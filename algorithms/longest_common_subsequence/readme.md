@@ -38,7 +38,7 @@
 This algorithm comes under Dynamic Programming. Dynamic Programming is a technique in computer programming that helps to efficiently solve a class of problems that have overlapping subproblems and optimal substructure property.
 Such problems involve repeatedly calculating the value of the same subproblems to find the optimum solution. 
 
-Using this algorithm longest common subsequence cab be found.
+Using this algorithm longest common subsequence can be found.
 
 #### How Dynamic Programming Works?
 Dynamic programming works by storing the result of subproblems so that when their solutions are required, they are at hand and we do not need to recalculate them.

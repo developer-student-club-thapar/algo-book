@@ -44,8 +44,8 @@ void lcsAlgo(char *S1, char *S2, int m, int n) {
 }
 
 int main() {
-  char S1[] = "ACADB";
-  char S2[] = "CBDA";
+  char S1[] = "ABCDEFGH";
+  char S2[] = "ABZCDXEFYGH";
   int m = strlen(S1);
   int n = strlen(S2);
 

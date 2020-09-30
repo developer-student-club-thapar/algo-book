@@ -39,8 +39,8 @@ def lcs_algo(S1, S2, m, n):
     print("LCS: " + "".join(lcs_algo))
 
 
-S1 = "ACADB"
-S2 = "CBDA"
+S1 = "ABCDEFGH"
+S2 = "ABZCDXEFYGH"
 m = len(S1)
 n = len(S2)
 lcs_algo(S1, S2, m, n)
