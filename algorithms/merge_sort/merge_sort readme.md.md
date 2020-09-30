@@ -71,27 +71,22 @@ After achieving the atomic values, it hits the base case condition and finally m
 #### 3. Merging of elements
 The first element of both the lists are compared. If sorting has to be done in ascending order, the smaller element among two becomes a new element of the sorted list. This procedure is repeated until both the smaller sublists are emptied and the newly combined sublist covers all the elements of both the sublists.
 
-&nbsp;
-
 <img src="1/solve 5.jpg"> 
 
-&nbsp;
 
 In the next iteration of the combining phase, we compare the lists of two data values, and merge them into a list in sorted order using algorithm (given above in prerequisites) merge two soted arrays into the third array and copy the data of third array into the original array.
 
-&nbsp;
+
 
 <img src="1/solve 6.jpg"> 
 
-&nbsp;
 
 After merging, our array becomes sorted and looks like this.
 
-&nbsp;
 
 <img src="1/solve 7.jpg"> 
 
-&nbsp;
+
 
 <p align="center">
 <img src="1/an.gif" width="300" height="300" />
