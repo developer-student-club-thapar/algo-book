@@ -45,9 +45,12 @@ Now let's have a look at the working of the algorithm:-
 <img src="1/4.png">  
 &nbsp;
 #### 1. Let's take an unsorted array
+&nbsp;
 <img src="1/solve 1.jpg">  
+
 &nbsp;
 #### 2. Divide the whole array into two parts. Here we will call merge_sort will divide the array into two equal parts by calculatng `mid=(starting_index+ending_index)/2` 
+
 &nbsp;
 <img src="/1/solve 2.jpg"> 
 &nbsp;
