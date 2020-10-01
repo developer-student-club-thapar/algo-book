@@ -3,17 +3,17 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-import { ServerLocation } from "@reach/router";
+import { StaticRouter } from "react-router-dom";
 import App from "../src/App";
 import dotenv from "dotenv";
 
 import routes from "./routes/routes";
 import db from "./Config/db";
 
-process.on("uncaughtException", err => {
+process.on("uncaughtException", (err) => {
     console.log(err);
 });
-process.on("unhandledRejection", err => {
+process.on("unhandledRejection", (err) => {
     console.log(err);
 });
 
@@ -33,14 +33,15 @@ if (!process.env.server) {
                     console.log(err);
                     return res.status(500).send("ERROR on thee server");
                 }
+                const ctx = {};
                 return res.send(
                     data.replace(
                         '<div id="root"></div>',
                         `<div id="root">
                     ${ReactDOMServer.renderToString(
-                        <ServerLocation url={req.url}>
+                        <StaticRouter location={req.url} context={ctx}>
                             <App />
-                        </ServerLocation>
+                        </StaticRouter>
                     )}
                     </div>`
                     )

@@ -5,7 +5,7 @@ Home
 */
 /* eslint-disable */
 import React, { Fragment, useState } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory, Link } from "react-router-dom";
 import {
     Container,
     AppBar,
@@ -85,6 +85,7 @@ const Algo = () => {
                     crumbs={[{ name: "Home", link: "/" }]}
                     active={valueToPage[tab]}
                 />
+                <Link to="/">BACK TO LANDING </Link>
                 <Paper elevation={0} variant="outlined">
                     <AppBar position="static" color="inherit">
                         <Tabs
@@ -105,5 +106,13 @@ const Algo = () => {
         </Fragment>
     );
 };
+
+// import React from "react";
+
+// const Algo = () => {
+//     return <h1>test</h1>;
+// };
+
+// export default Algo;
 
 export default Algo;

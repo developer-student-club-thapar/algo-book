@@ -14,8 +14,9 @@ module.exports = {
         __dirname: false,
         __filename: false,
     },
-    module: {
-        rules: [ESLintLoader],
-    },
-    plugins: [StyleLintPlugin, HtmlWebPackPluginProd],
+    // module: {
+    //     rules: [ESLintLoader],
+    // },
+    plugins: [HtmlWebPackPluginProd],
+    // plugins: [StyleLintPlugin, HtmlWebPackPluginProd],
 };
