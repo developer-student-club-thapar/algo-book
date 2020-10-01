@@ -18,17 +18,17 @@ const CSSLoader = {
     use: ["style-loader", "css-loader"],
 };
 
-const ESLintLoader = {
-    test: /\.js$/,
-    enforce: "pre",
-    exclude: /node_modules/,
-    use: {
-        loader: "eslint-loader",
-        options: {
-            configFile: `${__dirname}/../../.eslintrc`,
-        },
-    },
-};
+// const ESLintLoader = {
+//     test: /\.js$/,
+//     enforce: "pre",
+//     exclude: /node_modules/,
+//     use: {
+//         loader: "eslint-loader",
+//         options: {
+//             configFile: `${__dirname}/../../.eslintrc`,
+//         },
+//     },
+// };
 
 const htmlLoader = {
     test: /\.html$/,
@@ -39,6 +39,6 @@ module.exports = {
     babelLoader,
     svgLoader,
     CSSLoader,
-    ESLintLoader,
+    // ESLintLoader,
     htmlLoader,
 };
