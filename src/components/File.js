@@ -20,19 +20,18 @@ const useStyles = makeStyles({
     },
 });
 
-const File = ({ name }) => {
+const File = ({ name, handler }) => {
     const history = useHistory();
     const classes = useStyles();
-
-    const clickHandler = (e) => {
-        e.preventDefault();
-        // history.push({ link });
-    };
 
     return (
         <Fragment>
             <Tooltip title={name} arrow>
-                <Button onClick={clickHandler}>
+                <Button
+                    onClick={() => {
+                        handler(name);
+                    }}
+                >
                     <Grid
                         container
                         direction="column"

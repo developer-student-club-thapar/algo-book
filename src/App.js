@@ -22,24 +22,22 @@ function App() {
         //     </Switch>
         // </div>
         <>
-            <Router>
-                <CssBaseline>
-                    <Switch>
-                        <Route
-                            exact
-                            path="/:page(algo|ds)"
-                            render={(props) => <Algo {...props} />}
-                        />
+            <CssBaseline>
+                <Switch>
+                    <Route
+                        exact
+                        path="/:page(algo|ds)"
+                        render={(props) => <Algo {...props} />}
+                    />
 
-                        <Route
-                            exact
-                            path="/open"
-                            // /open?topic=&folder=
-                            render={(props) => <OpenFolder {...props} />}
-                        />
-                    </Switch>
-                </CssBaseline>
-            </Router>
+                    <Route
+                        exact
+                        path="/open"
+                        // /open?topic=&folder=
+                        render={(props) => <OpenFolder {...props} />}
+                    />
+                </Switch>
+            </CssBaseline>
         </>
     );
 }
