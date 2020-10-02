@@ -6,13 +6,13 @@ import Landing from "./pages/Landing";
 import api from "./util/api";
 
 function App() {
-    useEffect(() => {
-        const demoGetReq = async () => {
-            const { data } = await api.get("/demo");
-            console.log(data);
-        };
-        demoGetReq();
-    });
+    // useEffect(() => {
+    //     const demoGetReq = async () => {
+    //         const { data } = await api.get("/demo");
+    //         console.log(data);
+    //     };
+    //     demoGetReq();
+    // });
     return (
         <div>
             TEST

@@ -4,7 +4,7 @@ Tab where 2 "folders" of Algo and DS would be displayed
 Home
 */
 /* eslint-disable */
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import {
     Container,
@@ -17,16 +17,62 @@ import {
 } from "@material-ui/core";
 import BreadCrumbs from "../components/BreadCrumbs";
 import Folder from "../components/Folder";
+import axios from "axios";
+import api from "../util/api";
 
 const Algo = () => {
-    const algo = ["Searching", "Sorting", "Traversal"];
+    const [algos, setAlgos] = useState([]);
     const ds = ["Linked List", "Stacks", "Queues", "Graphs", "Trees"];
+    // useEffect(() => {
+    //     async function getAlgos() {
+    //         const { data } = await axios.get(
+    //             "https://api.github.com/repos/rishabhjain-28/algo-book-test/contents/algorithms"
+    //         );
+    //         console.log("algo", data);
+    //         setAlgos(data);
+    //         getAlgosDATA(data[0]);
+    //     }
 
+    //     async function getAlgosDATA(algo) {
+    //         const { data } = await axios.get(
+    //             `https://api.github.com/repos/rishabhjain-28/algo-book-test/contents/algorithms/${algo.name}`
+    //         );
+    //         console.log("algo-data", data);
+    //         // setAlgos(data);
+    //         getContent(algo, data[0]);
+    //     }
+    //     async function getContent(algo, file) {
+    //         const { data } = await axios.get(
+    //             `https://api.github.com/repos/rishabhjain-28/algo-book-test/contents/algorithms/${algo.name}/${file.name}`,
+    //             {
+    //                 headers: {
+    //                     accept: "application/vnd.github.VERSION.raw",
+    //                 },
+    //             }
+    //         );
+    //         console.log("algo-data-cpp", data);
+    //     }
+
+    //     getAlgos();
+    // }, []);
+    useEffect(() => {
+        async function getData() {
+            const { data } = await api.get("/git/contents/algorithms");
+            console.log("algo", data);
+            // setAlgos(data);
+            setAlgos(data);
+        }
+        getData();
+    }, []);
     const AlgoComponent = () => {
         return (
             <Grid container>
-                {algo.map((x, index) => (
-                    <Folder name={x} link={`/algo/${x}`} key={index} />
+                {algos.map((element, index) => (
+                    <Folder
+                        name={element.name}
+                        link={`/algo/${element.name}`}
+                        key={index}
+                    />
                 ))}
             </Grid>
         );
@@ -106,13 +152,5 @@ const Algo = () => {
         </Fragment>
     );
 };
-
-// import React from "react";
-
-// const Algo = () => {
-//     return <h1>test</h1>;
-// };
-
-// export default Algo;
 
 export default Algo;
