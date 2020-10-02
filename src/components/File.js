@@ -11,20 +11,22 @@ import {
     Typography,
     Tooltip,
 } from "@material-ui/core";
+import { useHistory, useParams } from "react-router-dom";
 
 const useStyles = makeStyles({
     folder: {
-        fontSize: "6rem",
+        fontSize: "3rem",
         color: "grey",
     },
 });
 
-const File = ({ name, link }) => {
+const File = ({ name }) => {
+    const history = useHistory();
     const classes = useStyles();
 
     const clickHandler = (e) => {
         e.preventDefault();
-        console.log(link);
+        // history.push({ link });
     };
 
     return (

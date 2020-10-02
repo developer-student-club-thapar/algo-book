@@ -4,7 +4,7 @@ Tab where 2 "folders" of Algo and DS would be displayed
 Home
 */
 /* eslint-disable */
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import {
     Container,
@@ -19,14 +19,23 @@ import BreadCrumbs from "../components/BreadCrumbs";
 import Folder from "../components/Folder";
 
 const Algo = () => {
-    const algo = ["Searching", "Sorting", "Traversal"];
-    const ds = ["Linked List", "Stacks", "Queues", "Graphs", "Trees"];
+    useEffect(() => {
+        setAlgo(["searching", "sorting", "traversal"]);
+        setDs(["linked_list", "stacks", "queues", "graphs", "trees"]);
+    }, []);
+
+    const [algo, setAlgo] = useState([]);
+    const [ds, setDs] = useState([]);
 
     const AlgoComponent = () => {
         return (
             <Grid container>
                 {algo.map((x, index) => (
-                    <Folder name={x} link={`/algo/${x}`} key={index} />
+                    <Folder
+                        name={x}
+                        link={`/open?topic=algo&folder=${x}`}
+                        key={index}
+                    />
                 ))}
             </Grid>
         );
@@ -36,7 +45,11 @@ const Algo = () => {
         return (
             <Grid container>
                 {ds.map((x, index) => (
-                    <Folder name={x} link={`/ds/${x}`} key={index} />
+                    <Folder
+                        name={x}
+                        link={`/open?topic=ds&folder=${x}`}
+                        key={index}
+                    />
                 ))}
             </Grid>
         );
@@ -82,10 +95,9 @@ const Algo = () => {
         <Fragment>
             <Container fixed>
                 <BreadCrumbs
-                    crumbs={[{ name: "Home", link: "/" }]}
-                    active={valueToPage[tab]}
+                    crumbs={[{ name: "HOME", link: "/" }]}
+                    active={valueToPage[tab].toUpperCase()}
                 />
-                <Link to="/">BACK TO LANDING </Link>
                 <Paper elevation={0} variant="outlined">
                     <AppBar position="static" color="inherit">
                         <Tabs
