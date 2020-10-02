@@ -3,6 +3,7 @@ Component to be displayed as folder
 */
 /* eslint-disable */
 import React, { Fragment } from "react";
+import { useHistory } from "react-router-dom";
 import FolderIcon from "@material-ui/icons/Folder";
 import {
     makeStyles,
@@ -23,11 +24,12 @@ const useStyles = makeStyles({
 });
 
 const Folder = ({ name, link }) => {
+    const history = useHistory();
     const classes = useStyles();
 
     const clickHandler = (e) => {
         e.preventDefault();
-        console.log(link);
+        history.push(link);
     };
 
     return (

@@ -3,9 +3,14 @@ Component where code would be displayed
 */
 
 import React from "react";
+import AceEditor from "react-ace";
 
 const CodeViewer = () => {
-    return <div></div>;
+    return(
+        <>
+
+        </>
+    );
 };
 
 export default CodeViewer;

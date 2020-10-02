@@ -29,9 +29,12 @@
         "dotenv": "^8.2.0",
         "mongoose": "^5.10.6",
         "react": "^16.13.1",
+        "react-ace": "^9.1.4",
         "react-dom": "^16.13.1",
         "react-router-dom": "^5.2.0",
-        "slugify": "^1.4.5"
+        "rich-markdown-editor": "^11.0.1",
+        "slugify": "^1.4.5",
+        "styled-components": "^5.2.0"
     },
     "devDependencies": {
         "@babel/core": "^7.11.6",

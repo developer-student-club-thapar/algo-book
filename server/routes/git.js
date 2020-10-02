@@ -1,82 +1,97 @@
 const router = require("express").Router();
 const axios = require("axios");
-// router.get("/algos", async (req, res) => {
-//     try {
-//         const { data } = await axios.get(
-//             "https://api.github.com/repos/rishabhjain-28/algo-book-test/contents/algorithms"
-//         );
-//         console.log("algos", data);
-//         res.json(data);
-//     } catch (err) {
-//         console.log("Some error occured while fetching algos=>", err);
-//         res.json({ msg: "Some error occured while fetching algos", err });
-//     }
-// });
 
-// router.get("/algo/files/:algoName", async (req, res) => {
-//     const { algoName } = req.params;
-//     if (!algoName) res.status(400).json({ msg: "No algo name provided" });
-//     try {
-//         const { data } = await axios.get(
-//             `https://api.github.com/repos/rishabhjain-28/algo-book-test/contents/algorithms/${algoName}`
-//         );
-//         console.log("algoFiles", data);
-//         res.json(data);
-//     } catch (err) {
-//         console.log(
-//             `Some error occured while fetching files for ${algoName} =>`,
-//             err
-//         );
-//         res.json({
-//             msg: `Some error occured while fetching files for ${algoName}`,
-//             err,
-//         });
-//     }
-// });
-// router.get("/algo/files/:algoName", async (req, res) => {
-//     const { algoName } = req.params;
-//     if (!algoName) res.status(400).json({ msg: "No algo name provided" });
-//     try {
-//         const { data } = await axios.get(
-//             `https://api.github.com/repos/rishabhjain-28/algo-book-test/contents/algorithms/${algoName}`
-//         );
-//         console.log("algoFiles", data);
-//         res.json(data);
-//     } catch (err) {
-//         console.log(
-//             `Some error occured while fetching files for ${algoName} =>`,
-//             err
-//         );
-//         res.json({
-//             msg: `Some error occured while fetching files for ${algoName}`,
-//             err,
-//         });
-//     }
-// });
-
-router.get("/contents/:path", async (req, res) => {
-    const { path } = req.params;
+//* get contents of a path
+router.get("/path/:type/:path?/:name?", async (req, res) => {
+    let { path, type, name } = req.params;
+    if (!path) {
+        path = "";
+    } else if (name) path += `/${name}`;
+    const readme = path.includes(".md");
     try {
-        const { data } = await axios.get(
-            `https://api.github.com/repos/rishabhjain-28/algo-book-test/contents/${path}`,
+        let { data } = await axios.get(
+            `https://api.github.com/repos/developer-student-club-thapar/algo-book/contents/${type}/${path}`,
             {
                 headers: {
-                    accept: "application/vnd.github.VERSION.raw",
+                    accept: readme
+                        ? "application/vnd.github.VERSION.html"
+                        : "application/vnd.github.VERSION.raw",
                 },
             }
         );
-        console.log(data);
+        if (path && !name) {
+            data = data.filter(
+                (item) =>
+                    item.name.toLowerCase().includes(".py") ||
+                    item.name.toLowerCase().includes(".js") ||
+                    item.name.toLowerCase().includes(".cpp") ||
+                    item.name.toLowerCase().includes(".java") ||
+                    item.name.toLowerCase().includes(".md")
+            );
+        }
         res.json(data);
     } catch (err) {
-        console.log(
-            `Some error occured while fetching files for ${algoName} =>`,
-            err
-        );
+        console.log(`Some error occured while fetching data from ${path}`, err);
         res.json({
-            msg: `Some error occured while fetching files for ${algoName}`,
+            msg: `Some error occured while fetching data from ${path}`,
             err,
         });
     }
 });
+
+//* route to get all 5 files at once
+// router.get("/contents/:type/:path?", async (req, res) => {
+//     let { type, path } = req.params;
+//     path = path ? path : "";
+//     try {
+//         let { data } = await axios.get(
+//             `https://api.github.com/repos/developer-student-club-thapar/algo-book/contents/${type}/${path}`,
+//             {
+//                 headers: {
+//                     accept: "application/vnd.github.VERSION.raw",
+//                 },
+//             }
+//         );
+//         console.log(data);
+//         if (path) {
+//             data = data.filter(
+//                 (item) =>
+//                     item.name.toLowerCase().includes(".py") ||
+//                     item.name.toLowerCase().includes(".js") ||
+//                     item.name.toLowerCase().includes(".cpp") ||
+//                     item.name.toLowerCase().includes(".java") ||
+//                     item.name.toLowerCase().includes(".md")
+//             );
+//             let promises = data.map((item) => {
+//                 return axios.get(
+//                     `https://api.github.com/repos/developer-student-club-thapar/algo-book/contents/${type}/${path}/${item.name}`,
+//                     {
+//                         headers: {
+//                             accept: item.name.includes(".md")
+//                                 ? "application/vnd.github.VERSION.html"
+//                                 : "application/vnd.github.VERSION.raw",
+//                         },
+//                     }
+//                 );
+//             });
+//             const results = Promise.all(promises);
+//             results.then((result) => {
+//                 result.forEach((item, i) => {
+//                     data[i].content = item.data;
+//                 });
+
+//                 res.json(data);
+//             });
+//         } else {
+//             res.json(data);
+//         }
+//     } catch (err) {
+//         console.log(`Some error occured while fetching files`, err);
+//         res.json({
+//             msg: `Some error occured while fetching files`,
+//             err,
+//         });
+//     }
+// });
 
 module.exports = router;
