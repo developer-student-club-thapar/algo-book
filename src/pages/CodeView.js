@@ -6,9 +6,16 @@ Home/Algorithms/Sorting/BubbleSort/C++
 */
 
 import React from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-const CodeView = () => {
-    return <div></div>;
+const CodeView = ({ file: { value, type } }) => {
+    return (
+        <>
+            <SyntaxHighlighter language={type} showLineNumbers>
+                {value}
+            </SyntaxHighlighter>
+        </>
+    );
 };
 
 export default CodeView;

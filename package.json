@@ -32,6 +32,7 @@
         "react-ace": "^9.1.4",
         "react-dom": "^16.13.1",
         "react-router-dom": "^5.2.0",
+        "react-syntax-highlighter": "^14.0.0",
         "rich-markdown-editor": "^11.0.1",
         "slugify": "^1.4.5",
         "styled-components": "^5.2.0"

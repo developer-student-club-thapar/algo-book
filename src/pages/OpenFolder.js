@@ -7,12 +7,13 @@ Home/Algorithms/Sorting/BubbleSort
 */
 
 import React, { useState, useEffect } from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, LinearProgress } from "@material-ui/core";
 import { useLocation } from "react-router-dom";
 import BreadCrumbs from "../components/BreadCrumbs";
 import File from "../components/File";
 import FIleViewer from "../components/FIleViewer";
 import api from "../util/api";
+import CodeView from "./CodeView";
 
 const useQuery = () => {
     return new URLSearchParams(useLocation().search);
@@ -37,24 +38,33 @@ const OpenFolder = () => {
         type: "",
         value: "",
     });
+    const [loading, setLoading] = useState(false);
 
     const handler = async (file) => {
         console.log(file);
+        setLoading(true);
         const { data } = await api.get(
             `/git/path/${
                 query.get("topic") === "algo" ? "algorithms" : "ds"
             }/${query.get("folder")}/${file}`
         );
         console.log(data);
+        setLoading(false);
+        const checker = /(?:\.([^.]+))?$/;
+        const ext =
+            checker.exec(file)[1] && checker.exec(file)[1].trim().toLowerCase();
         setFile({
-            type: file,
+            type: ext,
             value: data,
         });
     };
 
     const renderViewer = () => {
-        // ! Check file.type and add code editor
-        return <FIleViewer file={file} />;
+        if (loading) return <LinearProgress />;
+        else {
+            if (file.type == "md") return <FIleViewer file={file} />;
+            else return <CodeView file={file} />;
+        }
     };
 
     return (
