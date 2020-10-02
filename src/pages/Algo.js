@@ -4,7 +4,7 @@ Tab where 2 "folders" of Algo and DS would be displayed
 Home
 */
 /* eslint-disable */
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import {
     Container,
@@ -13,20 +13,37 @@ import {
     Tabs,
     Paper,
     Grid,
+    LinearProgress,
     makeStyles,
 } from "@material-ui/core";
 import BreadCrumbs from "../components/BreadCrumbs";
 import Folder from "../components/Folder";
+import api from "../util/api";
 
 const Algo = () => {
-    const algo = ["Searching", "Sorting", "Traversal"];
-    const ds = ["Linked List", "Stacks", "Queues", "Graphs", "Trees"];
+    useEffect(() => {
+        async function getAlgo() {
+            const { data } = await api.get("/git/path/algorithms");
+            console.log(data);
+            setAlgos(data);
+            setLoading(false);
+        }
+        getAlgo();
+    }, []);
+
+    const [algos, setAlgos] = useState([]);
+    const [ds, setDs] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const AlgoComponent = () => {
         return (
             <Grid container>
-                {algo.map((x, index) => (
-                    <Folder name={x} link={`/algo/${x}`} key={index} />
+                {algos.map((algo, index) => (
+                    <Folder
+                        name={algo.name}
+                        link={`/open?topic=algo&folder=${algo.name}`}
+                        key={index}
+                    />
                 ))}
             </Grid>
         );
@@ -36,7 +53,11 @@ const Algo = () => {
         return (
             <Grid container>
                 {ds.map((x, index) => (
-                    <Folder name={x} link={`/ds/${x}`} key={index} />
+                    <Folder
+                        name={x}
+                        link={`/open?topic=ds&folder=${x}`}
+                        key={index}
+                    />
                 ))}
             </Grid>
         );
@@ -64,6 +85,8 @@ const Algo = () => {
     };
 
     const renderPage = () => {
+        if (loading) return <LinearProgress />;
+
         switch (page) {
             case "algo":
                 return <AlgoComponent />;
@@ -82,10 +105,10 @@ const Algo = () => {
         <Fragment>
             <Container fixed>
                 <BreadCrumbs
-                    crumbs={[{ name: "Home", link: "/" }]}
-                    active={valueToPage[tab]}
+                    crumbs={[{ name: "HOME", link: "/" }]}
+                    active={valueToPage[tab].toUpperCase()}
                 />
-                <Link to="/">BACK TO LANDING </Link>
+                <br />
                 <Paper elevation={0} variant="outlined">
                     <AppBar position="static" color="inherit">
                         <Tabs
@@ -106,13 +129,5 @@ const Algo = () => {
         </Fragment>
     );
 };
-
-// import React from "react";
-
-// const Algo = () => {
-//     return <h1>test</h1>;
-// };
-
-// export default Algo;
 
 export default Algo;

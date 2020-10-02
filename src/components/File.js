@@ -11,26 +11,27 @@ import {
     Typography,
     Tooltip,
 } from "@material-ui/core";
+import { useHistory, useParams } from "react-router-dom";
 
 const useStyles = makeStyles({
     folder: {
-        fontSize: "6rem",
+        fontSize: "3rem",
         color: "grey",
     },
 });
 
-const File = ({ name, link }) => {
+const File = ({ name, handler }) => {
+    const history = useHistory();
     const classes = useStyles();
-
-    const clickHandler = (e) => {
-        e.preventDefault();
-        console.log(link);
-    };
 
     return (
         <Fragment>
             <Tooltip title={name} arrow>
-                <Button onClick={clickHandler}>
+                <Button
+                    onClick={() => {
+                        handler(name);
+                    }}
+                >
                     <Grid
                         container
                         direction="column"
