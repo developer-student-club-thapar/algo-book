@@ -13,6 +13,7 @@ import {
     Tabs,
     Paper,
     Grid,
+    LinearProgress,
     makeStyles,
 } from "@material-ui/core";
 import BreadCrumbs from "../components/BreadCrumbs";
@@ -25,12 +26,14 @@ const Algo = () => {
             const { data } = await api.get("/git/path/algorithms");
             console.log(data);
             setAlgos(data);
+            setLoading(false);
         }
         getAlgo();
     }, []);
 
     const [algos, setAlgos] = useState([]);
     const [ds, setDs] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const AlgoComponent = () => {
         return (
@@ -82,6 +85,8 @@ const Algo = () => {
     };
 
     const renderPage = () => {
+        if (loading) return <LinearProgress />;
+
         switch (page) {
             case "algo":
                 return <AlgoComponent />;
@@ -103,6 +108,7 @@ const Algo = () => {
                     crumbs={[{ name: "HOME", link: "/" }]}
                     active={valueToPage[tab].toUpperCase()}
                 />
+                <br />
                 <Paper elevation={0} variant="outlined">
                     <AppBar position="static" color="inherit">
                         <Tabs

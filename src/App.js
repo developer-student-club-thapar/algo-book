@@ -7,26 +7,30 @@ import {
     Switch,
 } from "react-router-dom";
 import Algo from "./pages/Algo.js";
-import { CssBaseline } from "@material-ui/core";
+import { CssBaseline, Container } from "@material-ui/core";
 import OpenFolder from "./pages/OpenFolder";
 
 function App() {
     return (
         <>
             <CssBaseline>
-                <Switch>
-                    <Route
-                        exact
-                        path="/:page(algo|ds)"
-                        render={(props) => <Algo {...props} />}
-                    />
+                <Container fixed>
+                    <Switch>
+                        <Redirect exact path="/" to="/algo" />
 
-                    <Route
-                        exact
-                        path="/open"
-                        render={(props) => <OpenFolder {...props} />}
-                    />
-                </Switch>
+                        <Route
+                            exact
+                            path="/:page(algo|ds)"
+                            render={(props) => <Algo {...props} />}
+                        />
+
+                        <Route
+                            exact
+                            path="/open"
+                            render={(props) => <OpenFolder {...props} />}
+                        />
+                    </Switch>
+                </Container>
             </CssBaseline>
         </>
     );
