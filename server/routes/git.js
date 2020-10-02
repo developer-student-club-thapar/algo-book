@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const axios = require("axios");
-
 //* get contents of a path
 router.get("/path/:type/:path?/:name?", async (req, res) => {
     let { path, type, name } = req.params;
@@ -19,6 +18,39 @@ router.get("/path/:type/:path?/:name?", async (req, res) => {
                 },
             }
         );
+        if (readme) {
+            const imgTags =
+                data.match(/<img.*?src="images(.*?)"[^\>]+>/g) || [];
+
+            imgTags.forEach((tag) => {
+                let src = tag.match(/images.([a-z0-9A-Z.])*/g);
+                src = src[0];
+
+                const newTag = tag.replace(
+                    src,
+
+                    `https://raw.githubusercontent.com/developer-student-club-thapar/algo-book/master/${type}/${
+                        path.split("/")[0]
+                    }/${src}`
+                );
+                data = data.replace(/<img.*?src="images(.*?)"[^\>]+>/, newTag);
+            });
+            const aTags = data.match(/<a.*?href="images(.*?)">/g) || [];
+            aTags.forEach((tag) => {
+                let src = tag.match(/images.([a-z0-9A-Z.])*/g);
+                src = src[0];
+
+                const newTag = tag.replace(
+                    src,
+
+                    `https://raw.githubusercontent.com/developer-student-club-thapar/algo-book/master/${type}/${
+                        path.split("/")[0]
+                    }/${src}`
+                );
+
+                data = data.replace(/<a.*?href="images(.*?)">/, newTag);
+            });
+        }
         if (path && !name) {
             data = data.filter(
                 (item) =>
@@ -29,6 +61,7 @@ router.get("/path/:type/:path?/:name?", async (req, res) => {
                     item.name.toLowerCase().includes(".md")
             );
         }
+
         res.json(data);
     } catch (err) {
         console.log(`Some error occured while fetching data from ${path}`, err);
