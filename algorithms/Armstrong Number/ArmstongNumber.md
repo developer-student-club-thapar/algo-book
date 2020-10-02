@@ -13,8 +13,6 @@ Ex: 371 is also an Armstrong Number because
 
 ## Pseudo code
 
-You can add the psuedo code all at once in here, in above section only add steps in a descriptive manner.
-
 ```
  temp = number
  no_of_digits=0 
