@@ -32,21 +32,21 @@ Test case 3 – Worst case: Here, the elements are reverse sorted.
 
 ## Pseudo code
 
-1  for j <- 2 to length[A]
+  for j <- 2 to length[A]
 
-2       do key <- A[j]
+       do key <- A[j]
 
-3         Insert A[j] into the sorted sequence A[1 . . j - 1].
+         Insert A[j] into the sorted sequence A[1 . . j - 1].
 
-4        i <- j - 1
+        i <- j - 1
 
-5        while i > 0 and A[i] > key
+        while i > 0 and A[i] > key
 
-6           do A[i + 1] <- A[i]
+           do A[i + 1] <- A[i]
 
-7              i <- i - 1
+              i <- i - 1
 
-8        A[i + 1] <- key
+        A[i + 1] <- key
 
 ## External content
 https://www.programiz.com/dsa/insertion-sort
