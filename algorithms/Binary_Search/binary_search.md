@@ -66,7 +66,7 @@ Hence the element to be searched 31 is present at location 5.
 <p>&nbsp;</p>
 
   
-    Procedure binary_search
+   Procedure binary_search
    A ← sorted array
    n ← size of array
    x ← value to be searched
@@ -78,16 +78,15 @@ Hence the element to be searched 31 is present at location 5.
       if upperBound < lowerBound 
          EXIT: x does not exists.
    
-      set midPoint = lowerBound + ( upperBound - lowerBound ) / 2
+   set midPoint = lowerBound + ( upperBound - lowerBound ) / 2
       
-      if A[midPoint] < x
-         set lowerBound = midPoint + 1
-         
-      if A[midPoint] > x
-         set upperBound = midPoint - 1 
-
-      if A[midPoint] = x 
-         EXIT: x found at location midPoint
+   if A[midPoint] < x
+       set lowerBound = midPoint + 1
+        
+   if A[midPoint] > x
+      set upperBound = midPoint - 1 
+   if A[midPoint] = x 
+       EXIT: x found at location midPoint
    end while
    
 end procedure
