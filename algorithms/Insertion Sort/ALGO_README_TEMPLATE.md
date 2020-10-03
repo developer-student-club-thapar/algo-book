@@ -1,36 +1,46 @@
-# Algo Name
+# Insertion Sort
 
-## Question
+## What is Insertion Sort
 
-Explain what has to be achieved
+Insertion Sort is basically insertion of an element from a random set of numbers, to its correct position where it should actually be, by shifting the other elements if required.
 
 ## Pre-Requisites
 
 Add pre-requisites here
 
--   One
--   Two
+-  Arrays
+-  Functions
 
 ## Explanation
 
-Include pictorial representation, pictures as required.
-Also, add steps to solve under this like
+1. Using a for loop, we are reading n elements from standard input into an array named arr.
+2. Next, we are comparing elements of the array so that we can insert them in the proper position using the insertion sort method.
+3. At the end, we are printing/displaying the sorted array.
 
--   This is step 1
--   This is step 2
--   Use `code` this to mention function, variable names
+
+Test case 1 – Average case: Here, the elements are entered in random order.
+
+![1](https://user-images.githubusercontent.com/63907704/94988355-263ba180-058a-11eb-8c09-93ac0a06770f.png)
+
+Test case 2 – Best case: Here, the elements are already sorted.
+
+![2](https://user-images.githubusercontent.com/63907704/94988378-55eaa980-058a-11eb-8053-2339462eeba3.png)
+
+Test case 3 – Worst case: Here, the elements are reverse sorted.
+
+![3](https://user-images.githubusercontent.com/63907704/94988400-803c6700-058a-11eb-87e4-7023f05dfb82.png)
 
 ## Pseudo code
 
-You can add the psuedo code all at once in here, in above section only add steps in a descriptive manner.
-
-```
-  You can use block code highlighting for this
-  (IF REQUIRED)
-```
+1  for j <- 2 to length[A]
+2       do key <- A[j]
+3         Insert A[j] into the sorted sequence A[1 . . j - 1].
+4        i <- j - 1
+5        while i > 0 and A[i] > key
+6           do A[i + 1] <- A[i]
+7              i <- i - 1
+8        A[i + 1] <- key
 
 ## External content
+https://www.programiz.com/dsa/insertion-sort
 
-Add links to other websites, visualizers using this [way to represent a link](https://thisisalink.com)
-
----
