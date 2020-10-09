@@ -1,26 +1,29 @@
+"""An algorithm to check whether the entered number is a Armstrong Number or not. :)"""
 
-def armstrong(n):
-    # Variable to store number of digits
-    digits = len(str(n))
-    
-    # Variable to Calculate Power Sum
-    sum = 0
-    
-    # Temprorary Variable to Store Original Number
-    temp = n
-   
-    # Main Logic
-    while temp!=0:
-        sum+= (temp%10)**digits   # Adding digits raised to power of number of Digits
-        temp//=10  # Integer Division by 10 
-    return n==sum # Return True or False according to answer
+#an_algo is the function which checks if the user input number is an Armstrong Number or not
 
-# Driver Code
-x = 371
+def an_algo(y):
+    a = str(y)
+    b = 0
 
-if armstrong(x):
-    print(f"{x} is an Armstrong Number")
-else:
-    print(f"{x} is not an Armstrong Number")
+    for i in range(len(a)):
+        b = b + int(a[i])**3
+
+    if a == str(b):
+        print(a," is an Armstrong Number \n")
+        return
+
+    else:
+        print(a," is not an Armstrong Number \n")
+        return
+
+#Asks user for an input
+
+nbr = int(input("Your Number : "))
+print("\n")
+
+#Calling the armstrong function
+
+an_algo(nbr)
 
 
