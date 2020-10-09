@@ -10,6 +10,7 @@ Before contributing, please ensure you have **read the complete guidelines**. If
 We are happy to see that you want to implement algorithms for others, and would like your submissions. We request that before you implement an algorithm you ensure the following:
 - The algorithms are not duplicates
 - Your work fulfills the guidelines as stated here
+- Please **do not** request maintainers to allot you to certain issues, or algorithms. Implement the algorithm, or resolve the issue. Once satisfactorily completed, and if not a duplicate, it will be merged into the fork.
 
 We follow a systematic Git Workflow -
 - Create a fork of this repo
