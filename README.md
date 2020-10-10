@@ -71,7 +71,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/RishabhJain-28"><img src="https://avatars3.githubusercontent.com/u/56471206?v=4" width="100px;" alt=""/><br /><sub><b>Rishabh Jain</b></sub></a><br /><a href="#design-RishabhJain-28" title="Design">🎨</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=RishabhJain-28" title="Documentation">📖</a> <a href="#maintenance-RishabhJain-28" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/RishabhJain-28"><img src="https://avatars3.githubusercontent.com/u/56471206?v=4" width="100px;" alt=""/><br /><sub><b>Rishabh Jain</b></sub></a><br /><a href="#design-RishabhJain-28" title="Design">🎨</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=RishabhJain-28" title="Documentation">📖</a> <a href="#maintenance-RishabhJain-28" title="Maintenance">🚧</a> <a href="#infra-RishabhJain-28" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 
