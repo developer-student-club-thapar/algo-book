@@ -24,7 +24,8 @@
       "contributions": [
         "design",
         "doc",
-        "maintenance"
+        "maintenance",
+        "infra"
       ]
     }
   ],
