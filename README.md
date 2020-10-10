@@ -1,6 +1,6 @@
 <div align = "center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <img height=200px src="https://github.com/developer-student-club-thapar/officialWebsite/blob/master/src/assets/dsc_logo.png">
@@ -77,6 +77,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/pranavvidyarthi7"><img src="https://avatars3.githubusercontent.com/u/55582190?v=4" width="100px;" alt=""/><br /><sub><b>Pranav Vidyarthi</b></sub></a><br /><a href="#content-pranavvidyarthi7" title="Content">🖋</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=pranavvidyarthi7" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/agg-pranav"><img src="https://avatars1.githubusercontent.com/u/56552104?v=4" width="100px;" alt=""/><br /><sub><b>Pranav Aggarwal</b></sub></a><br /><a href="#content-agg-pranav" title="Content">🖋</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=agg-pranav" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/mr-robot183"><img src="https://avatars0.githubusercontent.com/u/63597682?v=4" width="100px;" alt=""/><br /><sub><b>Priyanshu Sunadia</b></sub></a><br /><a href="#content-mr-robot183" title="Content">🖋</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=mr-robot183" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/shivom2k"><img src="https://avatars3.githubusercontent.com/u/56880740?v=4" width="100px;" alt=""/><br /><sub><b>shivom chawla</b></sub></a><br /><a href="#content-shivom2k" title="Content">🖋</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=shivom2k" title="Documentation">📖</a></td>
   </tr>
 </table>
 
