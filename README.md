@@ -1,4 +1,7 @@
 <div align = "center">
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <img height=200px src="https://github.com/developer-student-club-thapar/officialWebsite/blob/master/src/assets/dsc_logo.png">
 
@@ -58,3 +61,22 @@ As a community driven project, we welcome contribution from everyone, but before
 All feedback and suggestions are welcome!
 
 - 💬 Join the community on [Discord](https://discord.gg/3C4TESX)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/RishabhJain-28"><img src="https://avatars3.githubusercontent.com/u/56471206?v=4" width="100px;" alt=""/><br /><sub><b>Rishabh Jain</b></sub></a><br /><a href="#design-RishabhJain-28" title="Design">🎨</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=RishabhJain-28" title="Documentation">📖</a> <a href="#maintenance-RishabhJain-28" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

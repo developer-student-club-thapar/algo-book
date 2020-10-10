@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "RishabhJain-28",
+      "name": "Rishabh Jain",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/56471206?v=4",
+      "profile": "https://github.com/RishabhJain-28",
+      "contributions": [
+        "design",
+        "doc",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "algo-book",
+  "projectOwner": "developer-student-club-thapar",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
