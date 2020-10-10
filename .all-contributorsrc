@@ -47,6 +47,16 @@
         "content",
         "doc"
       ]
+    },
+    {
+      "login": "agg-pranav",
+      "name": "Pranav Aggarwal",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/56552104?v=4",
+      "profile": "https://github.com/agg-pranav",
+      "contributions": [
+        "content",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
