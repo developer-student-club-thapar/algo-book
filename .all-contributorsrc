@@ -97,6 +97,15 @@
         "content",
         "doc"
       ]
+    },
+    {
+      "login": "jsparmani",
+      "name": "Jay Parmani",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/41769747?v=4",
+      "profile": "https://linkedin.com/in/jsparmani",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,

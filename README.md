@@ -1,6 +1,6 @@
 <div align = "center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <img height=200px src="https://github.com/developer-student-club-thapar/officialWebsite/blob/master/src/assets/dsc_logo.png">
@@ -82,6 +82,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/RishiKr3101"><img src="https://avatars1.githubusercontent.com/u/65591606?v=4" width="100px;" alt=""/><br /><sub><b>Rishi Kumar</b></sub></a><br /><a href="#content-RishiKr3101" title="Content">🖋</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=RishiKr3101" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/DakshKK"><img src="https://avatars1.githubusercontent.com/u/54723155?v=4" width="100px;" alt=""/><br /><sub><b>DakshKK</b></sub></a><br /><a href="#content-DakshKK" title="Content">🖋</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=DakshKK" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://linkedin.com/in/jsparmani"><img src="https://avatars3.githubusercontent.com/u/41769747?v=4" width="100px;" alt=""/><br /><sub><b>Jay Parmani</b></sub></a><br /><a href="#infra-jsparmani" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 
