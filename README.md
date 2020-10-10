@@ -72,7 +72,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/RishabhJain-28"><img src="https://avatars3.githubusercontent.com/u/56471206?v=4" width="100px;" alt=""/><br /><sub><b>Rishabh Jain</b></sub></a><br /><a href="#design-RishabhJain-28" title="Design">🎨</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=RishabhJain-28" title="Documentation">📖</a> <a href="#maintenance-RishabhJain-28" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/Aryaman1706"><img src="https://avatars2.githubusercontent.com/u/56519273?v=4" width="100px;" alt=""/><br /><sub><b>Aryaman Grover</b></sub></a><br /><a href="#design-Aryaman1706" title="Design">🎨</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=Aryaman1706" title="Documentation">📖</a> <a href="#maintenance-Aryaman1706" title="Maintenance">🚧</a> <a href="#infra-Aryaman1706" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://github.com/Aryaman1706"><img src="https://avatars2.githubusercontent.com/u/56519273?v=4" width="100px;" alt=""/><br /><sub><b>Aryaman Grover</b></sub></a><br /><a href="#design-Aryaman1706" title="Design">🎨</a> <a href="https://github.com/developer-student-club-thapar/algo-book/commits?author=Aryaman1706" title="Documentation">📖</a> <a href="#maintenance-Aryaman1706" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
