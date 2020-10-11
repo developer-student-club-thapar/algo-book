@@ -1,5 +1,9 @@
 <div align = "center">
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square)](CONTRIBUTING.md)
+![Repo Size](https://img.shields.io/github/repo-size/developer-student-club-thapar/algo-book?style=flat-square)
+![License](https://img.shields.io/github/license/developer-student-club-thapar/algo-book?color=green&style=flat-square)
 [![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -12,7 +16,6 @@
 <a href="https://www.linkedin.com/company/developer-student-club-thapar"><img src="https://github.com/aritraroy/social-icons/blob/master/linkedin-icon.png?raw=true" width="60"></a>
 <a href="https://facebook.com/dscthapar"><img src="https://github.com/aritraroy/social-icons/blob/master/facebook-icon.png?raw=true" width="60"></a>
 <a href="https://instagram.com/dsc.tiet"><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="60"></a>
-
 </div>
 
 This is the repo for the **Algo Book** by Developer Student Club, TIET, Patiala, Punjab.
@@ -60,7 +63,7 @@ As a community driven project, we welcome contribution from everyone, but before
 
 All feedback and suggestions are welcome!
 
-- 💬 Join the community on [Discord](https://discord.gg/3C4TESX)
+- 💬 Join the community on [Discord](https://discord.gg/jc9X4cj)
 
 ## Contributors ✨
 
