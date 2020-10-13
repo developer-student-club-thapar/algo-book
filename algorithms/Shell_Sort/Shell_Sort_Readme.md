@@ -28,7 +28,7 @@ let us consider a detailed example to better understand the shell sort using a p
 - Consider the following array of 10 elements.
 
 <p align="center">
-  <img width="550" height="800" src="images/array-of-10-elements (img 1).png">
+  <img width="550" height="600" src="images/array-of-10-elements (img 1).png">
 </p>
 
 
