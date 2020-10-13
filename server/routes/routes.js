@@ -6,8 +6,10 @@ const router = require("express").Router();
 
 const demo = require("./demo");
 const git = require("./git");
+const local = require("./local");
 router.use("/demo", demo);
 router.use("/git", git);
+router.use("/local", local);
 
 router.route("/algorithms/").get(factory.getAll(Algo));
 

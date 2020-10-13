@@ -1,6 +1,5 @@
 const path = require("path");
-const { HtmlWebPackPluginProd, StyleLintPlugin } = require("./plugins/index");
-const { ESLintLoader } = require("./loaders/index");
+const { HtmlWebPackPluginProd } = require("./plugins/index");
 
 module.exports = {
     devtool: "source-map",
@@ -14,9 +13,5 @@ module.exports = {
         __dirname: false,
         __filename: false,
     },
-    // module: {
-    //     rules: [ESLintLoader],
-    // },
     plugins: [HtmlWebPackPluginProd],
-    // plugins: [StyleLintPlugin, HtmlWebPackPluginProd],
 };
