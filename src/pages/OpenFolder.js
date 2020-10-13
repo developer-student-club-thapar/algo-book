@@ -23,7 +23,7 @@ const OpenFolder = () => {
     useEffect(() => {
         async function getFiles() {
             const { data } = await api.get(
-                `/git/path/${
+                `/local/path/${
                     query.get("topic") === "algo" ? "algorithms" : "ds"
                 }/${query.get("folder")}`
             );
@@ -41,10 +41,10 @@ const OpenFolder = () => {
     const [loading, setLoading] = useState(false);
 
     const handler = async (file) => {
-        console.log(file);
+        // console.log(file);
         setLoading(true);
         const { data } = await api.get(
-            `/git/path/${
+            `/local/path/${
                 query.get("topic") === "algo" ? "algorithms" : "ds"
             }/${query.get("folder")}/${file}`
         );

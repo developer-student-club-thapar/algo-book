@@ -23,7 +23,7 @@ import api from "../util/api";
 const Algo = () => {
     useEffect(() => {
         async function getAlgo() {
-            const { data } = await api.get("/git/path/algorithms");
+            const { data } = await api.get("/local/path/algorithms");
             console.log(data);
             setAlgos(data);
             setLoading(false);

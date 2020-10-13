@@ -39,6 +39,5 @@ module.exports = {
     babelLoader,
     svgLoader,
     CSSLoader,
-    // ESLintLoader,
     htmlLoader,
 };
