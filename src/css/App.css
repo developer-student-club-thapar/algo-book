@@ -19,4 +19,6 @@
 
 .App-link {
     color: #09d3ac;
+    display: block;
+    color: white
 }
