@@ -1,35 +1,39 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include<iostream>
+#include<algorithm>
+#include<vector>
 
-// Function to print an array
-void printArray(int array[], int size) {
-  for (int i = 0; i < size; i++) {
-    cout << array[i] << " ";
-  }
-  cout << endl;
+template<typename T>
+/* A function to print values inside a vector  */
+std::ostream& operator<<(std::ostream& out, std::vector<T>& ls)
+{
+	out<<'[';
+	
+	for(auto i = ls.begin(); i != ls.end(); ++i)
+		out<<*i<<(i + 1 == ls.end() ? "" : ", ");
+	
+	out<<']';
+
+	return out;
 }
 
-void insertionSort(int array[], int size) {
-  for (int step = 1; step < size; step++) {
-    int key = array[step];
-    int j = step - 1;
-
-    // Compare key with each element on the left of it until an element smaller than
-    // it is found.
-    // For descending order, change key<array[j] to key>array[j].
-    while (key < array[j] && j >= 0) {
-      array[j + 1] = array[j];
-      --j;
-    }
-    array[j + 1] = key;
-  }
+template<typename Container>
+/* The main insertion sort function  */
+void binary_insertion_sort(Container& ctx)
+{
+	for(auto a = ctx.begin(); a != ctx.end(); ++a)
+		std::rotate(
+				std::upper_bound(ctx.begin(), a, *a),
+				//determines the maximum element in the range
+				a,
+				a + 1
+			); //pushes the element to the last
+	
 }
 
-// Driver code
-int main() {
-  int data[] = {9, 5, 1, 4, 3};
-  int size = sizeof(data) / sizeof(data[0]);
-  insertionSort(data, size);
-  cout << "Sorted array in ascending order:\n";
-  printArray(data, size);
+int main()
+{
+	std::vector<int> vec = {90, 1, 20, 45, 0, 18, 3};
+	std::cout<<"The vector before sorting "<<vec<<std::endl;
+	binary_insertion_sort(vec);
+	std::cout<<"After sorting "<<vec<<std::endl;
 }
