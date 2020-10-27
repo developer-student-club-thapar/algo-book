@@ -5,12 +5,12 @@ Eg :- Home/Algorithms/Sorting/Bubble/C++
 /* eslint-disable */
 import React, { Fragment } from "react";
 import { Breadcrumbs, Typography, Link } from "@material-ui/core";
-import { NavigateNext } from "@material-ui/icons";
+// import { NavigateNext } from "@material-ui/icons";
 
 const BreadCrumbs = ({ crumbs, active }) => {
     return (
         <Fragment>
-            <Breadcrumbs separator={<NavigateNext fontSize="small" />}>
+            <Breadcrumbs>
                 {crumbs.map((item, index) => {
                     return (
                         <Link color="inherit" href={item.link} key={index}>

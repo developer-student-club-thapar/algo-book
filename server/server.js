@@ -18,7 +18,11 @@ process.on("unhandledRejection", (err) => {
 
 const app = express();
 dotenv.config();
-
+app.get("*client.js", function (req, res, next) {
+    req.url = req.url + ".gz";
+    res.set("Content-Encoding", "gzip");
+    next();
+});
 app.use("/api", routes);
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 

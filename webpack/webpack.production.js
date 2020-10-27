@@ -1,5 +1,6 @@
 const path = require("path");
 const { HtmlWebPackPluginProd } = require("./plugins/index");
+var CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
     devtool: "source-map",
@@ -13,5 +14,13 @@ module.exports = {
         __dirname: false,
         __filename: false,
     },
-    plugins: [HtmlWebPackPluginProd],
+    plugins: [
+        HtmlWebPackPluginProd,
+        new CompressionPlugin({
+            algorithm: "gzip",
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.8,
+        }),
+    ],
 };

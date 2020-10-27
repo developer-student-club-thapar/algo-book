@@ -1,6 +1,8 @@
 const loaders = require("./loaders/index");
 const plugins = require("./plugins/index");
 const webpack = require("webpack");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+    .BundleAnalyzerPlugin;
 
 module.exports = {
     module: {
@@ -20,7 +22,8 @@ module.exports = {
     plugins: [
         plugins.MiniCssExtractPlugin,
         plugins.CleanWebpackPlugin,
-        // new webpack.ProgressPlugin(),
+        new webpack.ProgressPlugin(),
+        // new BundleAnalyzerPlugin(),
         new webpack.BannerPlugin({
             banner: (yourVariable) => {
                 return `yourVariable: ${yourVariable}`;
