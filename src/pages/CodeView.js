@@ -5,15 +5,20 @@ selected algo/DS would be displayed
 Home/Algorithms/Sorting/BubbleSort/C++
 */
 
-import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import React, { useEffect } from "react";
+import Prism from "prismjs";
 
 const CodeView = ({ file: { value, type } }) => {
+    useEffect(() => {
+        console.log("useEffect run");
+        Prism.highlightAll();
+    });
+
     return (
         <>
-            <SyntaxHighlighter language={type} showLineNumbers>
-                {value}
-            </SyntaxHighlighter>
+            <pre className="line-numbers">
+                <code className={`language-${type}`}>{value}</code>
+            </pre>
         </>
     );
 };

@@ -17,7 +17,7 @@ router.get("/path/:type/:topic?/:name?", async (req, res) => {
     try {
         let data;
         if (name) {
-            data = fs.readFileSync(path.resolve(type, topic, name), "utf8");
+            data = fs.readFileSync(path.resolve(type, topic, name), "utf-8");
             if (readme) {
                 data = converter.makeHtml(data);
                 data = replaceImgTags(data, type, topic);
