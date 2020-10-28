@@ -6,6 +6,7 @@ import ReactDOMServer from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
 import App from "../src/App";
 import dotenv from "dotenv";
+import { ServerStyleSheets } from "@material-ui/core/styles";
 
 import routes from "./routes/routes";
 
@@ -19,6 +20,11 @@ process.on("unhandledRejection", (err) => {
 const app = express();
 dotenv.config();
 
+app.get("*.client.js", function (req, res, next) {
+    req.url = req.url + ".gz";
+    res.set("Content-Encoding", "gzip");
+    next();
+});
 app.use("/api", routes);
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
@@ -33,15 +39,24 @@ if (!process.env.server) {
                     return res.status(500).send("ERROR on thee server");
                 }
                 const ctx = {};
+                const sheets = new ServerStyleSheets();
+                const html = ReactDOMServer.renderToString(
+                    sheets.collect(
+                        <StaticRouter location={req.originalUrl} context={ctx}>
+                            <App />
+                        </StaticRouter>
+                    )
+                );
+                const css = sheets.toString();
+                data = data.replace(
+                    '<style id="jss-server-side"></style>',
+                    `<style id="jss-server-side">${css}</style>`
+                );
                 return res.send(
                     data.replace(
                         '<div id="root"></div>',
                         `<div id="root">
-                    ${ReactDOMServer.renderToString(
-                        <StaticRouter location={req.url} context={ctx}>
-                            <App />
-                        </StaticRouter>
-                    )}
+                    ${html}
                     </div>`
                     )
                 );

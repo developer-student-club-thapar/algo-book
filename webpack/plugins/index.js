@@ -4,8 +4,6 @@ const {
     CleanWebpackPlugin: cleanWebpackPlugin,
 } = require("clean-webpack-plugin");
 
-const path = require("path");
-
 const HtmlWebPackPluginDev = new htmlWebPackPlugin({
     template: "./src/public/index.html",
     filename: "./index.html",

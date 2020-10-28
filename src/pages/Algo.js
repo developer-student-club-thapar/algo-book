@@ -14,7 +14,6 @@ import {
     Paper,
     Grid,
     LinearProgress,
-    makeStyles,
 } from "@material-ui/core";
 import BreadCrumbs from "../components/BreadCrumbs";
 import Folder from "../components/Folder";
@@ -24,7 +23,7 @@ const Algo = () => {
     useEffect(() => {
         async function getAlgo() {
             const { data } = await api.get("/local/path/algorithms");
-            console.log(data);
+            // console.log(data);
             setAlgos(data);
             setLoading(false);
         }
