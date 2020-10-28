@@ -5,7 +5,8 @@ Eg :- Home/Algorithms/Sorting/Bubble/C++
 /* eslint-disable */
 import React, { Fragment } from "react";
 import { Breadcrumbs, Typography, Link } from "@material-ui/core";
-import { NavigateNext } from "@material-ui/icons";
+import { Link as RouterLink } from "react-router-dom";
+import NavigateNext from "@material-ui/icons/NavigateNext";
 
 const BreadCrumbs = ({ crumbs, active }) => {
     return (
@@ -13,7 +14,12 @@ const BreadCrumbs = ({ crumbs, active }) => {
             <Breadcrumbs separator={<NavigateNext fontSize="small" />}>
                 {crumbs.map((item, index) => {
                     return (
-                        <Link color="inherit" href={item.link} key={index}>
+                        <Link
+                            component={RouterLink}
+                            color="inherit"
+                            to={item.link}
+                            key={index}
+                        >
                             {item.name}
                         </Link>
                     );

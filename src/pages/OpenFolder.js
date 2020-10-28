@@ -48,7 +48,7 @@ const OpenFolder = () => {
                 query.get("topic") === "algo" ? "algorithms" : "ds"
             }/${query.get("folder")}/${file}`
         );
-        console.log(data);
+        // console.log(data);
         setLoading(false);
         const checker = /(?:\.([^.]+))?$/;
         const ext =

@@ -10,7 +10,7 @@ import Prism from "prismjs";
 
 const CodeView = ({ file: { value, type } }) => {
     useEffect(() => {
-        console.log("useEffect run");
+        // console.log("useEffect run");
         Prism.highlightAll();
     });
 
