@@ -25,7 +25,6 @@ app.get("*.client.js", function (req, res, next) {
     res.set("Content-Encoding", "gzip");
     next();
 });
-
 app.use("/api", routes);
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
