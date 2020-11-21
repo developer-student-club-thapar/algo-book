@@ -15,11 +15,11 @@ import {
 
 const useStyles = makeStyles({
     folder: {
-        fontSize: "6rem",
+        fontSize: "6",
         color: "grey",
     },
     txt: {
-        maxWidth: "100px",
+        fontSize: "100px",
     },
 });
 
@@ -28,7 +28,7 @@ const Folder = ({ name, link }) => {
     const classes = useStyles();
 
     const clickHandler = (e) => {
-        e.preventDefault();
+      
         history.push(link);
     };
 
@@ -39,7 +39,7 @@ const Folder = ({ name, link }) => {
                     <Grid
                         container
                         direction="column"
-                        justify="center"
+                        justify-content="center"
                         alignItems="stretch"
                         spacing={0}
                     >
