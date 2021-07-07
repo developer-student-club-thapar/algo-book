@@ -1,36 +1,28 @@
-# Algo Name
+# Palindrome
 
 ## Question
 
-Explain what has to be achieved
+Program to check whether a number or string is palindrome or not.
 
 ## Pre-Requisites
 
-Add pre-requisites here
-
--   One
--   Two
+-   Should accept strings as well as integers as input.
 
 ## Explanation
 
-Include pictorial representation, pictures as required.
-Also, add steps to solve under this like
+Palindrome is nothing but any number or a string which remains unaltered when reversed. 
 
--   This is step 1
--   This is step 2
--   Use `code` this to mention function, variable names
+- For example: 'LOL', 'LEVEL', 'RACECAR', 454, 1221, etc.
 
 ## Pseudo code
 
-You can add the psuedo code all at once in here, in above section only add steps in a descriptive manner.
-
-```
-  You can use block code highlighting for this
-  (IF REQUIRED)
-```
+-   Take input from user and store it in a variable. 
+-   Reverse its content and store the reversed content in another variable.
+-   Check if the content in both the variable are equal or not.
+-   If equal print "Is Palindrome", else print "Not Palindrome".
 
 ## External content
 
-Add links to other websites, visualizers using this [way to represent a link](https://thisisalink.com)
+[Program to check if the number is palindrome or not](https://www.geeksforgeeks.org/program-to-check-the-number-is-palindrome-or-not/)
 
 ---
